@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kostikys</title>
+
+    <style>
+        body {
+            height: 90vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #ddccff;
+        }
+
+        .main {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            font-size: 3vh;
+        }
+
+        .loginButton {
+            background-color: #ffffff;
+            border: none;
+            border-radius: 2vh;
+            height: 6vh;
+            width: 18vh;
+            font-size: 2vh;
+        }
+
+    </style>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            
+            function addToCart(product) {
+                cart.push(product);
+                localStorage.setItem("cart", JSON.stringify(cart));
+                alert("Přidáno do košíku: " + product.name);
+            }
+
+            document.querySelectorAll(".add-to-cart").forEach(button => {
+                button.addEventListener("click", function () {
+                    let product = {
+                        name: this.dataset.name,
+                        price: this.dataset.price
+                    };
+                    addToCart(product);
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+
+    <div class="main">
+        <h1>Kostikys</h1>
+        <p>Všechny možné hlavolamy, ať se vám láme hlava.
+        </p>
+        <button class="loginButton"><a href="login.html">Přihlásit se</a></button>
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+

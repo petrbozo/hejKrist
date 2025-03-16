@@ -1,0 +1,6 @@
+Začněte na "start.html" prosím
+
+Paní učitelko jestli nějak javascript nebude fungovat tak se omlouvám ale sama víte že někdy je hroznej
+
+Jinak chci ještě dodat že jsem dal javascript a css do html souborů z důvodu že už takhle se mi ty soubory
+míchaly mezi sebou a byl by v tom zmatek. Vím že to tak nechcete ale doufám že to pochopíte

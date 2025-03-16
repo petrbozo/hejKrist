@@ -1,0 +1,70 @@
+<!-- login.html -->
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <title>Přihlášení</title>
+    <style>
+        body {
+            height: 90vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #ddccff;
+        }
+
+        .main {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            width: 50vh;
+            height: 50vh;
+            font-size: 3vh;
+        }
+
+
+        .loginButton {
+            background-color: #ffffff;
+            border: none;
+            border-radius: 2vh;
+            height: 5vh;
+            width: 15vh;
+
+            font-size: 2vh;
+        }
+
+        
+        .loginInput {
+            text-align: center;
+            background-color: #ffffff;
+            border: none;
+            border-radius: 2vh;
+            height: 5vh;
+            width: 25vh;
+            font-size: 2vh;
+        }
+
+    </style>
+    <script>
+        function login() {
+            let username = document.getElementById("username").value;
+            if (username.trim() === "") {
+                alert("Zadejte uživatelské jméno.");
+                return;
+            }
+            localStorage.setItem("user", username);
+            window.location.href = "kostikys.html";
+        }
+    </script>
+</head>
+<body>
+    <div class="main">
+        <h2>Přihlášení</h2>
+        <input class="loginInput" type="text" id="username" placeholder="Zadejte uživatelské jméno">
+        <button onclick="login()" class="loginButton">Přihlásit se</button>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hlavní stránka</title>
+    <style>
+        body {
+            height: 90vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #ffffff;
+
+        }
+
+        .body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        a {
+            text-decoration: none;
+            color: #000000;
+        }
+
+        nav {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            width: 70vh;
+        }
+
+        .up {
+            font-size: 2vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border-radius: 2vh;
+            background-color: #ddccff;
+            padding-bottom: 2vh;
+        }
+
+
+        .loginButton {
+            background-color: #ffffff;
+            border: none;
+            border-radius: 2vh;
+            height: 5vh;
+            width: 15vh;
+
+            font-size: 2vh;
+        }
+
+        
+        .loginInput {
+            text-align: center;
+            background-color: #ffffff;
+            border: none;
+            border-radius: 2vh;
+            height: 5vh;
+            width: 25vh;
+            font-size: 2vh;
+        }
+
+        .products {
+            margin-top: 12vh;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .productA {
+            border: 1px solid #aaaaaa;
+            border-radius: 2vh;
+            margin-inline: 8vh;
+            height: 50vh;
+            width: 40vh;
+            background-color: #ffffff;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        img {
+            width: 30vh;
+            height: 30vh;
+        }
+
+    </style>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
+            let user = localStorage.getItem("user");
+            
+            
+            document.getElementById("userGreet").innerHTML = `Vítejte zpět, ${user}!</p>`;
+    });
+    </script>
+</head>
+<body>
+    <div class="body">
+        <div class="up">
+            <h3 id="userGreet"></h3>
+            <header>
+                <nav>
+                    <a href="index.html">Domů</a>
+                    <a href="about.html">O nás</a>
+                    <a href="cart.html">Košík</a>
+                    <a href="terms.html">Podmínky užívání</a>
+                </nav>
+            </header>
+        </div>
+
+        <div class="main">
+            <div class="products">
+                <div class="productA">
+                    <img src="pictures/main/3x3cube.jpg" alt="">
+                </div>
+                <div class="productA">
+                    <img src="pictures/main/megaminx.jpg" alt="">
+                </div>
+                <div class="productA">
+                    <img src="pictures/main/otherPuzzle.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
